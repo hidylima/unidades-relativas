@@ -1,0 +1,14 @@
+:root {
+	font-size: 16px; /*Tam. da fonte fixada no elemento raiz*/
+}
+
+#pai-em {
+	font-size: 14px;
+}
+
+.em {
+	background-color: yellow;
+	width: 1em; /*section "em" fica com 14px devido ao elemento pai*/
+	/*height: 1em*/
+	font-size: 2em;
+}

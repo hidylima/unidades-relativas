@@ -1,0 +1,15 @@
+:root {
+  font: normal 100% verdana, arial, tahoma, sans-serif; /*16px*/
+}
+
+div {
+    font: 1.88em verdana, arial, tahoma, sans-serif; /*30/16*/
+}
+
+h1 {
+    font-size: .67em; /*20/30*/
+}
+
+p {
+    font-size: .4em; /*COMEÇANDO POR AQUI: 12px/30px(contexto div)*/
+}

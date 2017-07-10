@@ -1,0 +1,98 @@
+* {
+    -webkit-transition: all 300ms ease-in-out;
+    transition: all 300ms ease-in-out;
+}
+
+:root {
+    font-size: 24px; /*se este valor for alterado, toda as fontes da página serão alteradas*/
+}
+
+@media screen and (min-width: 800px) {
+    
+    :root {
+        font-size: 16px;
+    }
+
+}
+
+body {
+    max-width: 40rem; /*640/16*/
+    padding: 1rem;
+    margin: 2rem auto;
+}
+
+h1 {
+    font-size: 3rem; /*48/16*/
+}
+
+p {
+    font-size: 1rem; /*16/16*/
+}
+
+.button {
+    font-size: 1rem;
+    text-decoration: none;
+    color: #666;
+    font-weight: bold;
+    display: inline-block;
+    border: .0625em solid #ccc; /*1/16*/ /*01*/
+    border-radius: .188em; /*3/16*/
+    padding: .625em .938em; /*10/16 15/16*/
+}
+
+.button:hover {
+    border-color: #999;
+}
+
+
+/* 01 --> Valor da medida em: O tamanho de 
+fonte do elemento na qual foi usada. Ou seja, 
+a espessura do border está setada baseada na 
+font-size do próprio button (acima). 
+
+Neste caso, o contexto é o próprio elemento. 
+Seguindo a abordagem do autor do vídeo, os rems 
+devem estar nos "text-nodes" e os ems devem estar 
+em coisas anexadas aos "text-nodes". Dessa forma, 
+os ems estão associados com a estrutura atômica 
+do botão em si. Eu não quero que o estilo da 
+borda esteja associada ao font-size do documento.
+
+Se colocarmos o padding com ems, por exemplo, 
+ele não será associado com o root, mas com o 
+font-size do próprio elemento.
+
+Quando a fonte do botão é aumentada, o padding 
+ainda é proporcional ao botão em si.
+
+
+-------------------
+
+
+Em outros casos, o contexto pode ser o valor 
+do font-size do elemento pai. Exemplo:
+
+Fórmula: target ÷ context = result
+
+<body>
+
+    h1 {
+      font: 20px verdana, arial, tahoma, sans-serif;
+    }
+
+</body>
+
+Então o target (que é o elemento que queremos 
+modificar) é 20px. Nesse caso o BODY é o pai do nosso 
+H1. Logo, valor da font do body é o context (contexto), 
+que tem o valor padrão de 16px. Logo 20 ÷ 16 = 1.25.
+
+<body>
+
+    h1 {
+      font: 1.25em verdana, arial, tahoma, sans-serif;
+    }
+
+</body>
+
+*/
